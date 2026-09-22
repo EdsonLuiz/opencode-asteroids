@@ -19,7 +19,7 @@ npx serve .
 - Single-file game loop: `requestAnimationFrame` → `update(dt)` → `draw()`
 - State machine: `'playing'` | `'dead'` | `'gameover'`
 - Toroidal wrapping via `wrap(v, max)` utility
-- Classes: `Ship`, `Bullet`, `Asteroid`, `Particle`
+- Classes: `Ship`, `Bullet`, `Asteroid`, `Particle`, `Powerup`
 - Input via global `keys` / `justPressed` objects
 
 ## Key Constants (game.js)
@@ -28,6 +28,7 @@ npx serve .
 - Scoring: `POINTS = [0, 100, 50, 20]` (small=100, large=20)
 - Ship: radius 12, thrust 260 px/s², rotation 3.5 rad/s
 - Bullet speed: 520 px/s, TTL 1.1s
+- Speed powerup (`speed`): 2x thrust for 5s (`speedBoost` timer on Ship), yellow diamond with `S`, 8% spawn on asteroid destroy (`powerups` array)
 
 ## Controls
 | Key | Action |

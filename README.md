@@ -43,3 +43,4 @@ Then visit `http://localhost:3000`.
 - 3 lives with temporary invincibility upon respawn (blinking)
 - Asteroids split into smaller fragments when destroyed
 - Explosion particles when destroying asteroids
+- **Speed powerup** (`S`): doubles ship thrust for 5 seconds (8% chance to spawn when destroying an asteroid)
