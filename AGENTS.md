@@ -5,7 +5,7 @@ Classic Asteroids clone in pure HTML5 Canvas + vanilla ES6 JS. No dependencies, 
 
 ## Files
 - `index.html` — Entry point, loads `game.js`
-- `game.js` — All game logic (single file, ~420 lines)
+- `game.js` — All game logic (single file, ~590 lines)
 - `favicon.svg` — Window icon
 
 ## Running
@@ -19,7 +19,7 @@ npx serve .
 - Single-file game loop: `requestAnimationFrame` → `update(dt)` → `draw()`
 - State machine: `'playing'` | `'dead'` | `'gameover'`
 - Toroidal wrapping via `wrap(v, max)` utility
-- Classes: `Ship`, `Bullet`, `Asteroid`, `Particle`, `Powerup`
+- Classes: `Ship`, `Bullet`, `Asteroid`, `ShootingStar`, `Particle`, `Powerup`
 - Input via global `keys` / `justPressed` objects
 
 ## Key Constants (game.js)
@@ -29,6 +29,7 @@ npx serve .
 - Ship: radius 12, thrust 260 px/s², rotation 3.5 rad/s
 - Bullet speed: 520 px/s, TTL 1.1s
 - Speed powerup (`speed`): 2x thrust for 5s (`speedBoost` timer on Ship), yellow diamond with `S`, 8% spawn on asteroid destroy (`powerups` array)
+- Shooting star: 51% spawn chance per level, once per game; 120 px/s horizontal meteor with a fading trail, no wrapping, 200 points on destruction
 
 ## Controls
 | Key | Action |
